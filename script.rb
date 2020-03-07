@@ -1,42 +1,49 @@
+#!/usr/bin/env ruby
+
 require 'csv'
 
-if ARGV.length != 2
+if ARGV.length != 1
     puts ""
     puts "Error, invalid arguments: "
     puts
     puts "\tUsage: script.rb <filename>"
     puts ""
+    puts ARGV.length
+    puts ARGV
     exit 1
 end
 
-data = CSV.read('/Users/papiamento/Code/southdadecarescoalition.net/South Dade Providers Physical Zipcode Listing(2).csv')
 
-firstTime = true
+filename = ARGV[0]
 
-data.each do |x|
+providers = CSV.read(filename)
 
-        if firstTime == true
-            firstTime = false
+skippedHeader = false
+
+providers.each do |provider|
+
+        if skippedHeader == false
+            skippedHeader = true
             next
         end
 
         puts ""
-        puts "# Provider ID: #{x[0]} #"
-        puts "## Provider Name: #{x[1]} ##"
-        puts "Description: #{x[2]}"
+        puts "# Provider ID: #{provider[0]} #"
+        puts "## Provider Name: #{provider[1]} ##"
+        puts "Description: #{provider[2]}"
         puts ""
     
-        puts "Main Street Address: #{x[3]}  "
-        puts "City: #{x[4]}  "
-        puts "State: #{x[5]}  "
-        puts "Zip Code: #{x[6]}  "
+        puts "Main Street Address: #{provider[3]}  "
+        puts "City: #{provider[4]}  "
+        puts "State: #{provider[5]}  "
+        puts "Zip Code: #{provider[6]}  "
     
         puts ""
-        puts "Main Phone Number: #{x[7]}  "
-        puts "Main Contact Title: #{x[8]}  "
-        puts "Main Contact Email: #{x[9]}  "
-        puts "Website Address: #{x[10]}  "
-        puts "Intake Procedure: #{x[11]}  "
-        puts "Program Fees: #{x[6]}  "
+        puts "Main Phone Number: #{provider[7]}  "
+        puts "Main Contact Title: #{provider[8]}  "
+        puts "Main Contact Email: #{provider[9]}  "
+        puts "Website Address: #{provider[10]}  "
+        puts "Intake Procedure: #{provider[11]}  "
+        puts "Program Fees: #{provider[6]}  "
 
 end
