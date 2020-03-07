@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ruby script.rb > print.md
+ruby script.rb '/Users/papiamento/Code/southdadecarescoalition.net/South Dade Providers Physical Zipcode Listing(2).csv' > print.md
 
 unix2dos print.md
 
