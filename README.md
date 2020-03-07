@@ -21,3 +21,7 @@ This repository contains the following csv convertor scripts
 * Brew Mac OSX package manager(https://brew.sh/)    
 * dos2unix ($ brew install dos2unix)
 * pandoc ($ brew install pandoc)
+
+## video example on how to run it
+
+[Screencast of how to run the script](videoExample.mov)
