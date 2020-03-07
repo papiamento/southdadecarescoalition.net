@@ -17,9 +17,10 @@ filename=$1
 
 echo ${filename}    
 
-./script.rb "${filename}" > print.md
+./convertToMarkdown "${filename}" > print.md
 
 unix2dos print.md
 
 pandoc -o print.docx -f markdown -t docx print.md
 
+echo "Successfully converted Csv To Word Document: print.docx"

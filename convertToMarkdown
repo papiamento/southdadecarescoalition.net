@@ -8,8 +8,6 @@ if ARGV.length != 1
     puts
     puts "\tUsage: script.rb <filename>"
     puts ""
-    puts ARGV.length
-    puts ARGV
     exit 1
 end
 
@@ -47,3 +45,5 @@ providers.each do |provider|
         puts "Program Fees: #{provider[6]}  "
 
 end
+
+puts "Successfully converted csv to Markdown file: print.md"
