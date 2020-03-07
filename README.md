@@ -24,4 +24,4 @@ This repository contains the following csv convertor scripts
 
 ## video example on how to run it
 
-[Screencast of how to run the script](videoExample.mov)
+[Screencast of how to run the script](https://www.youtube.com/watch?v=MzLP5Pv_xn4)
